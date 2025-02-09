@@ -19,49 +19,56 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       body: GestureDetector(
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
-        child: Column(
-          children: [
-            Container(
-              height: 300,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Colors.black87
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 300,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Colors.black87
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 30,
+                    bottom: 30,
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Register',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      Text(
+                        'Create your account',
+                        style: TextStyle(
+                          color: Colors.grey,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.only(
+              Container(
+                padding: EdgeInsets.only(
+                  right: 30,
                   left: 30,
-                  bottom: 30,
+                  top: 50,
+                  bottom: 50
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Register',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold
-                      ),
-                    ),
-                    Text(
-                      'Create your account',
-                      style: TextStyle(
-                        color: Colors.grey,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(30),
+                height: 550,
                 child: Form(
                   key: formKey,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.end,
+                    spacing: 25,
                     children: [
                       TextFormField(
                         validator: (value) {
@@ -231,7 +238,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             onPressed: () {
                               isObscure = !isObscure;
                               setState(() {});
-
                             },
                             icon: isObscure
                                 ? Icon(Icons.visibility, color: Colors.grey)
@@ -325,9 +331,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           child: Text(
                             'Register',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
                             ),
                           ),
                         ),
@@ -336,41 +342,41 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(30),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    "Already have an account?",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => LogInScreen()
-                          )
-                      );
-                    },
-                    child: Text(
-                      'Login',
+              Container(
+                padding: EdgeInsets.all(30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Already have an account?",
                       style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold
+                          color: Colors.black,
+                          fontSize: 18
                       ),
                     ),
-                  )
-                ],
-              ),
-            )
-          ],
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => LogInScreen()
+                            )
+                        );
+                      },
+                      child: Text(
+                        'Login',
+                        style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
