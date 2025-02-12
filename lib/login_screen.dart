@@ -67,15 +67,15 @@ class _LoginScreenState extends State<LogInScreen> {
                   right: 30,
                   left: 30,
                   top: 50,
-                  bottom: 50
+                  bottom: 30
                 ),
-                height: 550,
+                height: 600,
                 child: Form(
                   key: formKey,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    spacing: 25,
+                    spacing: 10,
                     children: [
                       TextFormField(
                         validator: (value) {
@@ -100,6 +100,10 @@ class _LoginScreenState extends State<LogInScreen> {
                           hintText: 'Enter your email',
                           hintStyle: TextStyle(
                             color: Colors.grey,
+                          ),
+                          prefixIcon: Icon(
+                            Icons.mail,
+                            color: Colors.blue,
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -158,6 +162,10 @@ class _LoginScreenState extends State<LogInScreen> {
                           hintText: 'Enter your password',
                           hintStyle: TextStyle(
                             color: Colors.grey,
+                          ),
+                          prefixIcon: Icon(
+                            Icons.lock,
+                            color: Colors.blue,
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -325,7 +333,9 @@ class _LoginScreenState extends State<LogInScreen> {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(30),
+                padding: EdgeInsets.only(
+                  bottom: 50
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
