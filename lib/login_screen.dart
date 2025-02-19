@@ -93,7 +93,7 @@ class _LoginScreenState extends State<LogInScreen> {
                         decoration: InputDecoration(
                           labelText: 'Email',
                           labelStyle: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.lightGreen,
                             fontSize: 18,
                             fontWeight: FontWeight.bold
                           ),
@@ -103,7 +103,7 @@ class _LoginScreenState extends State<LogInScreen> {
                           ),
                           prefixIcon: Icon(
                             Icons.mail,
-                            color: Colors.blue,
+                            color: Colors.lightGreen,
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -114,21 +114,21 @@ class _LoginScreenState extends State<LogInScreen> {
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
                             borderSide: BorderSide(
-                              color: Colors.blue,
+                              color: Colors.lightGreen,
                               width: 2
                             )
                           ),
                           errorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
                             borderSide: BorderSide(
-                              color: Colors.blueAccent,
+                              color: Colors.green,
                               width: 5
                             )
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
                             borderSide: BorderSide(
-                              color: Colors.blueAccent,
+                              color: Colors.green,
                               width: 5
                             )
                           )
@@ -155,7 +155,7 @@ class _LoginScreenState extends State<LogInScreen> {
                         decoration: InputDecoration(
                           labelText: 'Password',
                           labelStyle: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.lightGreen,
                             fontSize: 18,
                             fontWeight: FontWeight.bold
                           ),
@@ -165,7 +165,7 @@ class _LoginScreenState extends State<LogInScreen> {
                           ),
                           prefixIcon: Icon(
                             Icons.lock,
-                            color: Colors.blue,
+                            color: Colors.lightGreen,
                           ),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -176,21 +176,21 @@ class _LoginScreenState extends State<LogInScreen> {
                           focusedBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
                             borderSide: BorderSide(
-                              color: Colors.blue,
+                              color: Colors.lightGreen,
                               width: 2
                             )
                           ),
                           errorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
                             borderSide: BorderSide(
-                              color: Colors.blueAccent,
+                              color: Colors.green,
                               width: 5
                             )
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
                             borderSide: BorderSide(
-                              color: Colors.blueAccent,
+                              color: Colors.green,
                               width: 5
                             )
                           ),
@@ -211,7 +211,7 @@ class _LoginScreenState extends State<LogInScreen> {
                         child: Text(
                           'Forgot Password?',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.lightGreen,
                             fontSize: 18,
                             fontWeight: FontWeight.bold
                           ),
@@ -228,7 +228,7 @@ class _LoginScreenState extends State<LogInScreen> {
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(15)),
-                            color: Colors.blue,
+                            color: Colors.lightGreen,
                           ),
                           height: 60,
                           width: double.infinity,
@@ -358,7 +358,7 @@ class _LoginScreenState extends State<LogInScreen> {
                       child: Text(
                         'Register',
                         style: TextStyle(
-                            color: Colors.blue,
+                            color: Colors.lightGreen,
                             fontSize: 18,
                             fontWeight: FontWeight.bold
                         ),
